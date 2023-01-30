@@ -38,11 +38,50 @@ public void testAverageWithoutLowest() {
 Input that doesn't cause a failure:  
 ```
 @Test  
-public void testAverageWithoutLowest() {  
-    double[] arr = {1, 2, 3, 5, 9};   
+public void testAverageWithoutLowest2() {  
+    double[] arr = {1, 2, 4, 5, 9};   
     assertEquals(4.0, ArrayExamples.averageWithoutLowest(arr), 0);  
 }  
 ```  
+Symptoms:   
+
+![Image](assets/Symptoms.png)  
+  
+Buggy version:    
+
+```  
+static double averageWithoutLowest(double[] arr) {  
+    if(arr.length < 2) { return 0.0; }  
+    double lowest = arr[0];  
+    for(double num: arr) {  
+      if(num < lowest) { lowest = num; }  
+    }  
+    double sum = 0;  
+    for(double num: arr) {  
+      if(num != lowest) { sum += num; }  
+    }  
+    return sum / (arr.length - 1);  
+}  
+```  
+  
+Fixed version:  
+  
+```  
+static double averageWithoutLowest(double[] arr) {  
+    if(arr.length < 2) { return 0.0; }  
+    double lowest = arr[0];  
+    for(double num: arr) {  
+      if(num < lowest) { lowest = num; }  
+    }  
+    double sum = 0;  
+    for(double num: arr) {  
+      if(num != lowest) { sum += num; }  
+    }  
+    return sum / (arr.length - 1);  
+}  
+```  
+  
+  
 
 ## Part 3: Reflection  
   
