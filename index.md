@@ -24,7 +24,7 @@ After the previous query and /add-message?s=World
 
 ## Part 2: Bugs  
   
-averageWithoutLowest from ArrayExamples  
+Bugs in averageWithoutLowest from ArrayExamples  
   
 ```
 @Test  
