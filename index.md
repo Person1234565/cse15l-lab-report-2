@@ -6,11 +6,14 @@ This is my code for StringServer:
   
 This is the page that pops up when I run StringServer with different queries:  
   
-After /add-message?s=Hello:    
+After /add-message?s=Hello    
 
 ![Image](assets/AddMessage1.png)  
-  
-After /add-message?s=World:    
+
+- First, handleRequest is called. In this method, url.getPath() is called and is compared to "/add-message." Then, url.getQuery() is called and .split("=") is called on the returned string. Finally, the first element in the returned string array is compared to "s" through .equals("s"), and if it is, the queried value is added to the existing string with an escape character and returned. 
+- 
+
+After /add-message?s=Hello and /add-message?s=World    
   
 ![Image](assets/AddMessage2.png)  
 
