@@ -4,7 +4,7 @@ This is my code for StringServer:
   
 ![Image](assets/StringServerCode.png)  
   
-This is the page that pops up when I run StringServer:  
+This is the page that pops up when I run StringServer with different queries:  
   
 
 ![Image](assets/AddMessage1.png)  
