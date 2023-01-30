@@ -77,7 +77,7 @@ static double averageWithoutLowest(double[] arr) {
     for(double num: arr) {  
       sum += num;  
     }  
-    return (sum - lowest)/ (arr.length - 1);  
+    return (sum - lowest) / (arr.length - 1);  
 }  
 ```  
   
