@@ -15,4 +15,4 @@ This is the page that pops up when I run StringServer with different queries:
 
 ## Part 3: Reflection  
   
-I learned about how servers handle queries as well as the components of a URI. I also learned about various testing concepts such as the definitions of symptoms vs. bugs. I never conceptualized how symptoms might be caused by the same bug or how bugs could cause multiple symptoms.   
+I learned about how servers handle queries as well as the components of a URI. I also learned about various testing concepts such as the definitions of symptoms vs. bugs. I never conceptualized the difference between the two terms and how the same symptom might be caused by multiple bugs or how one bug can cause multiple symptoms.   
