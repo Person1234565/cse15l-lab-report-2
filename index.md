@@ -26,11 +26,12 @@ After the previous query and /add-message?s=World
   
 averageWithoutLowest from ArrayExamples  
   
->`@Test
-  public void testAverageWithoutLowest() {
-    double[] arr = {1, 1, 1, 5, 9}; 
-    assertEquals(4.0, ArrayExamples.averageWithoutLowest(arr), 0);
-  }`
+`
+@Test  
+public void testAverageWithoutLowest() {  
+    double[] arr = {1, 1, 1, 5, 9};   
+    assertEquals(4.0, ArrayExamples.averageWithoutLowest(arr), 0);  
+}`  
 
 ## Part 3: Reflection  
   
