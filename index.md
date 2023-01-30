@@ -40,7 +40,7 @@ Input that doesn't cause a failure:
 @Test  
 public void testAverageWithoutLowest2() {  
     double[] arr = {1, 2, 4, 5, 9};   
-    assertEquals(4.0, ArrayExamples.averageWithoutLowest(arr), 0);  
+    assertEquals(5.0, ArrayExamples.averageWithoutLowest(arr), 0);  
 }  
 ```  
 Symptoms:   
@@ -75,14 +75,14 @@ static double averageWithoutLowest(double[] arr) {
     }  
     double sum = 0;  
     for(double num: arr) {  
-      if(num != lowest) { sum += num; }  
+      sum += num;  
     }  
-    return sum / (arr.length - 1);  
+    return (sum - lowest)/ (arr.length - 1);  
 }  
 ```  
   
-  
+This fixes the bug by only removing a single instance of the lowest value from the sum rather than all instances of the lowest value. Previously, the method would subtract all instances of the lowest value while still dividing by the array length - 1, which would give an incorrect average. After this fix, the method subtracts the lowest value only once and divides by the correct number of elements remaining, giving the correct average.   
 
 ## Part 3: Reflection  
   
-I learned about how servers handle queries as well as the components of a URI. I also learned about various testing concepts such as the definitions of symptoms vs. bugs. I never conceptualized the difference between the two terms and how the same symptom might be caused by multiple bugs or how one bug can cause multiple symptoms.   
+I learned about how servers handle queries as well as the components of a URI. I also learned about various testing concepts such as the definitions of symptoms vs. bugs. I never conceptualized the difference between the two terms and how the same symptom might be caused by multiple bugs or how one bug can cause multiple symptoms. Another thing I learned was anonymous classes and lambda functions, which were used to implement StringChecker in Lab 3.    
