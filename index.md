@@ -14,9 +14,11 @@ After /add-message?s=Hello
 - Initially, the main method is called with "8005" as an argument to set up the server. Then, "localhost:8005/add-message?s=Hello" is passed into the handleRequest method. In the Handler class, the list field is initialized to "". After the path and query are compared to the expected values, the list field becomes "Hello\n" and is returned. 
 - With this request, the main value that was changed was the private field list from the Handler class, which changed from "" to "Hello\n". 
 
-After /add-message?s=Hello and /add-message?s=World    
+After the previous query and /add-message?s=World    
   
 ![Image](assets/AddMessage2.png)  
+  
+- 
 
 ## Part 2: Bugs  
 
