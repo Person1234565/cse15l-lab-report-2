@@ -6,8 +6,11 @@ This is my code for StringServer:
   
 This is the page that pops up when I run StringServer with different queries:  
   
+After /add-message?s=Hello:    
 
 ![Image](assets/AddMessage1.png)  
+  
+After /add-message?s=World:    
   
 ![Image](assets/AddMessage2.png)  
 
